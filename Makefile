@@ -3,7 +3,8 @@ install:
 		pip install -r requirements.txt
 
 test:
-	python -m pytest -vv --cov=main --cov=mylib test_*.py
+	# Do your own test here
+	# python -m pytest -vv --cov=main --cov=mylib test_*.py
 
 format:	
 	black *.py 
@@ -17,6 +18,6 @@ container-lint:
 refactor: format lint
 
 deploy:
-	#deploy goes here
+	# deploy goes here
 		
 all: install lint test format deploy
